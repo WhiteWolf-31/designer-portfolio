@@ -1,5 +1,3 @@
-# Creative Canvas
-
 # Build a Premium Creative Designer Portfolio — Sutharshana Suriyakumar
 
 Create a **modern, premium, highly creative and fully responsive personal portfolio website** for **Sutharshana Suriyakumar**, a Creative Designer.
@@ -34,26 +32,6 @@ The project should be clean, component-based, maintainable and beginner-friendly
 ### Profession
 
 **Creative Designer**
-
-### Location
-
-**Vavuniya, Sri Lanka**
-
-### Address
-
-**No. 225/46, Neriyakulam Road, Nelukkulam, Vavuniya, Sri Lanka**
-
-### Email
-
-**[sutharshanasooriyakumar10@gmail.com](mailto:sutharshanasooriyakumar10@gmail.com)**
-
-### Phone
-
-**0776176037**
-
-### LinkedIn
-
-**https://www.linkedin.com/in/sutharshana-suriyakumar/**
 
 ---
 
@@ -622,24 +600,6 @@ Your Message
 SEND MESSAGE
 ```
 
-Contact information:
-
-### Email
-
-[sutharshanasooriyakumar10@gmail.com](mailto:sutharshanasooriyakumar10@gmail.com)
-
-### Phone
-
-0776176037
-
-### Location
-
-Vavuniya, Sri Lanka
-
-### LinkedIn
-
-https://www.linkedin.com/in/sutharshana-suriyakumar/
-
 Animations:
 
 * Heading reveal
@@ -931,15 +891,6 @@ After each major section, ensure it is responsive before moving to the next sect
 
 The final result should be production-quality, visually polished, fully responsive and suitable for a professional Creative Designer portfolio.
 
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/19c4725c-76e7-4590-9494-05357bee4782).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
