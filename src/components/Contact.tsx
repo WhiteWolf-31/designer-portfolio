@@ -45,7 +45,7 @@ export function Contact() {
       }
 
       form.reset();
-      toast.success("Thanks for your message!", {
+      toast.success("Message sent successfully", {
         duration: 5000,
       });
     } catch (error) {

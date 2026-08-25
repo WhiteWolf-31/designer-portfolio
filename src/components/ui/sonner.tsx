@@ -14,23 +14,24 @@ const Toaster = ({ ...props }: ToasterProps) => {
       toastOptions={{
         duration: 5000,
         className:
-          "!mb-2 !mr-2 w-[min(92vw,20rem)] rounded-2xl border border-[#D3F64A]/20 bg-[#121212]/95 p-3 text-foreground shadow-[0_12px_28px_rgba(0,0,0,0.28)] backdrop-blur-md sm:w-[18rem]",
+          "!mb-2 !mr-2 !max-w-[calc(100vw-1rem)] !w-[min(22rem,calc(100vw-1rem))] rounded-2xl border border-[color-mix(in_oklch,var(--color-accent)_28%,transparent)] bg-[color-mix(in_oklch,var(--color-background)_94%,transparent)] p-3 text-foreground shadow-[0_12px_28px_rgba(0,0,0,0.28)] backdrop-blur-md sm:!mr-4 sm:!w-[22rem]",
         classNames: {
           toast: "gap-3",
-          title: "ml-2 font-display text-sm font-medium tracking-[0.08em] text-[#D3F64A] leading-none",
+          title:
+            "ml-2 font-display text-sm font-medium tracking-[0.08em] text-accent leading-tight",
           description: "hidden",
-          actionButton: "bg-[#D3F64A] text-neutral-950",
+          actionButton: "bg-accent text-accent-foreground",
           cancelButton: "bg-muted text-foreground",
           closeButton:
-            "border border-[#D3F64A]/20 bg-[#1a1a1a] text-[#D3F64A] !h-6 !w-6 !min-h-0 !min-w-0 !p-0 text-[0.7rem]",
+            "border border-accent/20 bg-surface text-accent !h-6 !w-6 !min-h-0 !min-w-0 !p-0 text-[0.7rem]",
         },
         style: {
-          fontFamily: '"Inter", sans-serif',
+          fontFamily: "var(--font-sans)",
         },
       }}
       icons={{
         success: (
-          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#D3F64A] text-sm font-black text-neutral-950">
+          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-black text-accent-foreground">
             ✓
           </span>
         ),
