@@ -1,0 +1,413 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system — premium dark editorial portfolio.
+ * Background #030001 · Accent #A2C51D · Text #E4E5DF (converted to oklch).
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --font-display: "Unbounded", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --radius: 0.75rem;
+  --background: oklch(0.11 0.01 20);
+  --foreground: oklch(0.915 0.006 106);
+  --surface: oklch(0.17 0.008 110);
+  --card: oklch(0.15 0.008 110);
+  --card-foreground: oklch(0.915 0.006 106);
+  --popover: oklch(0.15 0.008 110);
+  --popover-foreground: oklch(0.915 0.006 106);
+  --primary: #D3F64A;
+  --primary-foreground: oklch(0.15 0.02 120);
+  --secondary: oklch(0.22 0.008 110);
+  --secondary-foreground: oklch(0.915 0.006 106);
+  --muted: oklch(0.22 0.008 110);
+  --muted-foreground: oklch(0.66 0.008 106);
+  --accent: #D3F64A;
+  --accent-foreground: oklch(0.15 0.02 120);
+  --destructive: oklch(0.6 0.2 25);
+  --destructive-foreground: oklch(0.96 0.005 106);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: #D3F64A;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  button,
+  a,
+  [role="button"] {
+    cursor: pointer;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .font-display,
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 500;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@utility btn-accent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: var(--color-accent);
+  color: var(--color-accent-foreground);
+  padding: 0.85rem 1.6rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+  }
+}
+
+@utility btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid var(--color-border);
+  color: var(--color-foreground);
+  padding: 0.85rem 1.6rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+}
+
+@utility icon-btn {
+  display: inline-flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid var(--color-border);
+  color: var(--color-foreground);
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+}
+
+@utility field {
+  margin-top: 0.6rem;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--color-border);
+  background-color: transparent;
+  padding: 0.65rem 0;
+  font-size: 0.95rem;
+  color: var(--color-foreground);
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    border-bottom-color: var(--color-accent);
+    outline: none;
+  }
+}
+
+@utility text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-accent);
+}
+
+@keyframes watermark-spotlight {
+  from {
+    background-position: 180% 50%;
+  }
+  to {
+    background-position: -80% 50%;
+  }
+}
+
+@keyframes marquee-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@utility marquee-track {
+  animation: marquee-scroll 30s linear infinite;
+  will-change: transform;
+}
+
+@utility watermark-spotlight {
+  color: transparent;
+  background: linear-gradient(
+    110deg,
+    color-mix(in oklch, var(--color-foreground) 35%, transparent) 0%,
+    color-mix(in oklch, var(--color-foreground) 35%, transparent) 42%,
+    var(--color-accent) 50%,
+    color-mix(in oklch, var(--color-foreground) 35%, transparent) 58%,
+    color-mix(in oklch, var(--color-foreground) 35%, transparent) 100%
+  );
+  background-size: 220% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: watermark-spotlight 5s linear infinite;
+}
+
+@layer components {
+  .uiverse {
+    --duration: 7s;
+    --easing: linear;
+    --c-color-1: color-mix(in oklch, var(--color-accent) 70%, transparent);
+    --c-color-2: var(--color-accent);
+    --c-color-3: color-mix(in oklch, var(--color-accent) 60%, black);
+    --c-color-4: color-mix(in oklch, var(--color-accent) 80%, transparent);
+    --c-shadow: color-mix(in oklch, var(--color-accent) 50%, transparent);
+    --c-shadow-inset-top: color-mix(in oklch, var(--color-accent) 80%, transparent);
+    --c-shadow-inset-bottom: color-mix(in oklch, var(--color-background) 80%, transparent);
+    --c-radial-inner: var(--color-background);
+    --c-radial-outer: var(--color-background);
+    --c-color: var(--color-foreground);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    display: table;
+    border-radius: 9999px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    color: var(--c-color);
+    background: radial-gradient(
+      circle,
+      var(--c-radial-inner),
+      var(--c-radial-outer) 80%
+    );
+    box-shadow: 0 0 14px var(--c-shadow);
+  }
+
+  .uiverse:before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 9999px;
+    box-shadow:
+      inset 0 3px 12px var(--c-shadow-inset-top),
+      inset 0 -3px 4px var(--c-shadow-inset-bottom);
+  }
+
+  .uiverse .wrapper {
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    overflow: hidden;
+    border-radius: 9999px;
+    min-width: 132px;
+    padding: 12px 0;
+  }
+
+  .uiverse .wrapper span {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+
+  .uiverse:hover {
+    --duration: 1400ms;
+  }
+
+  .uiverse .wrapper .circle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    filter: blur(var(--blur, 8px));
+    background: var(--background-c, transparent);
+    transform: translate(var(--x, 0), var(--y, 0)) translateZ(0);
+    animation: var(--animation, none) var(--duration) var(--easing) infinite;
+  }
+
+  .uiverse .wrapper .circle.circle-1,
+  .uiverse .wrapper .circle.circle-9,
+  .uiverse .wrapper .circle.circle-10 {
+    --background-c: var(--c-color-4);
+  }
+
+  .uiverse .wrapper .circle.circle-3,
+  .uiverse .wrapper .circle.circle-4 {
+    --background-c: var(--c-color-2);
+    --blur: 14px;
+  }
+
+  .uiverse .wrapper .circle.circle-5,
+  .uiverse .wrapper .circle.circle-6 {
+    --background-c: var(--c-color-3);
+    --blur: 16px;
+  }
+
+  .uiverse .wrapper .circle.circle-2,
+  .uiverse .wrapper .circle.circle-7,
+  .uiverse .wrapper .circle.circle-8,
+  .uiverse .wrapper .circle.circle-11,
+  .uiverse .wrapper .circle.circle-12 {
+    --background-c: var(--c-color-1);
+    --blur: 12px;
+  }
+
+  .uiverse .wrapper .circle.circle-1 { --x: 0; --y: -40px; --animation: circle-1; }
+  .uiverse .wrapper .circle.circle-2 { --x: 92px; --y: 8px; --animation: circle-2; }
+  .uiverse .wrapper .circle.circle-3 { --x: -12px; --y: -12px; --animation: circle-3; }
+  .uiverse .wrapper .circle.circle-4 { --x: 80px; --y: -12px; --animation: circle-4; }
+  .uiverse .wrapper .circle.circle-5 { --x: 12px; --y: -4px; --animation: circle-5; }
+  .uiverse .wrapper .circle.circle-6 { --x: 56px; --y: 16px; --animation: circle-6; }
+  .uiverse .wrapper .circle.circle-7 { --x: 8px; --y: 28px; --animation: circle-7; }
+  .uiverse .wrapper .circle.circle-8 { --x: 28px; --y: -4px; --animation: circle-8; }
+  .uiverse .wrapper .circle.circle-9 { --x: 20px; --y: -12px; --animation: circle-9; }
+  .uiverse .wrapper .circle.circle-10 { --x: 64px; --y: 16px; --animation: circle-10; }
+  .uiverse .wrapper .circle.circle-11 { --x: 4px; --y: 4px; --animation: circle-11; }
+  .uiverse .wrapper .circle.circle-12 { --blur: 14px; --x: 52px; --y: 4px; --animation: circle-12; }
+
+  @keyframes circle-1 {
+    33% { transform: translate(0px, 16px) translateZ(0); }
+    66% { transform: translate(12px, 64px) translateZ(0); }
+  }
+  @keyframes circle-2 {
+    33% { transform: translate(80px, -10px) translateZ(0); }
+    66% { transform: translate(72px, -48px) translateZ(0); }
+  }
+  @keyframes circle-3 {
+    33% { transform: translate(20px, 12px) translateZ(0); }
+    66% { transform: translate(12px, 4px) translateZ(0); }
+  }
+  @keyframes circle-4 {
+    33% { transform: translate(76px, -12px) translateZ(0); }
+    66% { transform: translate(112px, -8px) translateZ(0); }
+  }
+  @keyframes circle-5 {
+    33% { transform: translate(84px, 28px) translateZ(0); }
+    66% { transform: translate(40px, -32px) translateZ(0); }
+  }
+  @keyframes circle-6 {
+    33% { transform: translate(28px, -16px) translateZ(0); }
+    66% { transform: translate(76px, -56px) translateZ(0); }
+  }
+  @keyframes circle-7 {
+    33% { transform: translate(8px, 28px) translateZ(0); }
+    66% { transform: translate(20px, -60px) translateZ(0); }
+  }
+  @keyframes circle-8 {
+    33% { transform: translate(32px, -4px) translateZ(0); }
+    66% { transform: translate(56px, -20px) translateZ(0); }
+  }
+  @keyframes circle-9 {
+    33% { transform: translate(20px, -12px) translateZ(0); }
+    66% { transform: translate(80px, -8px) translateZ(0); }
+  }
+  @keyframes circle-10 {
+    33% { transform: translate(68px, 20px) translateZ(0); }
+    66% { transform: translate(100px, 28px) translateZ(0); }
+  }
+  @keyframes circle-11 {
+    33% { transform: translate(4px, 4px) translateZ(0); }
+    66% { transform: translate(68px, 20px) translateZ(0); }
+  }
+  @keyframes circle-12 {
+    33% { transform: translate(56px, 0px) translateZ(0); }
+    66% { transform: translate(60px, -32px) translateZ(0); }
+  }
+}
