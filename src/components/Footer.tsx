@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { FiLinkedin, FiMail } from "react-icons/fi";
+import { FiInstagram, FiLinkedin, FiMail } from "react-icons/fi";
+import { SiFiverr, SiMedium } from "react-icons/si";
 import { personal, navItems } from "@/data/portfolioData";
 import { fadeUp, viewportOnce } from "@/lib/motion-presets";
 
@@ -79,6 +80,33 @@ export function Footer() {
               className="icon-btn transition-colors hover:border-accent hover:text-accent"
             >
               <FiLinkedin className="h-4 w-4" />
+            </a>
+            <a
+              href={personal.instagram}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram Profile"
+              className="icon-btn transition-colors hover:border-accent hover:text-accent"
+            >
+              <FiInstagram className="h-4 w-4" />
+            </a>
+            <a
+              href={personal.medium}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Medium Profile"
+              className="icon-btn transition-colors hover:border-accent hover:text-accent"
+            >
+              <SiMedium className="h-4 w-4" />
+            </a>
+            <a
+              href={personal.fiverr}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Fiverr Profile"
+              className="icon-btn transition-colors hover:border-accent hover:text-accent"
+            >
+              <SiFiverr className="h-4 w-4" />
             </a>
             <a
               href={`mailto:${personal.email}`}

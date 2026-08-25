@@ -8,6 +8,9 @@ export const personal = {
   email: "sutharshanasooriyakumar10@gmail.com",
   phone: "+94 77-617-6037",
   linkedin: "https://www.linkedin.com/in/sutharshana-suriyakumar/",
+  instagram: "https://www.instagram.com/sutharshanaofficial",
+  medium: "https://medium.com/@sutharshanasooriyakumar10",
+  fiverr: "https://www.fiverr.com/sutharshana28/",
   statement:
     "I transform ideas into meaningful visual experiences through design, branding, UI/UX and visual storytelling.",
 };
