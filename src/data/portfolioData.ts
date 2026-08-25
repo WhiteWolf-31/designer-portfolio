@@ -57,7 +57,7 @@ export const additionalSkills = [
 
 export const education = [
   {
-    period: "Sep 2025 – Sep 2026",
+    period: "Ongoing",
     years: "2025 — 2026",
     school: "AMDT School of Creativity",
     award: "Diploma Pearson BTEC",
@@ -65,11 +65,51 @@ export const education = [
     description: "",
   },
   {
-    period: "Jun 2025 – Dec 2025",
+    period: "2025 – 2026",
     years: "2025",
     school: "Royal Academy of Professional",
     award: "Diploma of Education",
     field: "English Language and Literature, General",
+    description: "",
+  },
+
+  {
+    period: "2024 – 2025",
+    years: "2025",
+    school: " Oxford College edu",
+    link: "https://www.srilankabusiness.com/exporters-directory/company-profiles/oxford-college/",
+    award: "Higher Diploma in Practical English",
+    field: "Advanced English Language and Communication Skills",
+    description: "",
+  },
+
+  {
+    period: "2020",
+    years: "2025",
+    school: "Action-education-suisse.org",
+    link: "https://action-education-suisse.org/",
+    award: "Information Technology (IT) / Certificate ",
+    field: "Information Technology (IT)",
+    description: "",
+  },
+
+  {
+    period: "2020",
+    years: "2025",
+    school: "V / Nelukkulam K.M.M.V",
+    link: "https://www.nkmv.lk/",
+    award: "G.C.E. Advanced Level",
+    field: "Commerce Stream",
+    description: "",
+  },
+
+  {
+    period: "2018",
+    years: "2025",
+    school: "V / Nelukkulam K.M.M.V",
+    link: "https://www.nkmv.lk/",
+    award: "G.C.E. Ordinary Level",
+    field: "General Education",
     description: "",
   },
 ];
@@ -77,8 +117,25 @@ export const education = [
 export const experience = [
   {
     number: "01",
+    title: " Senior Creative Designer",
+    company: "Prime One Global (PVT) LTD",
+    companyLink: "https://www.primeone.global/",
+    period: "Jul 2026",
+    points: [
+      "Graphic Design",
+      "Branding",
+      "UI/UX Design",
+      "Multimedia Production",
+      "Collaboration & Innovation",
+    ],
+    description:
+      "Lead creative direction for branding and marketing campaigns Develop high-quality visual content for digital platforms Ensure brand consistency across all media Collaborate with marketing and development teams Guide junior designers and improve workflow efficiency",
+  },
+  {
+    number: "02",
     title: "Creative Designer",
     company: "Prime One Global (PVT) LTD",
+    companyLink: "https://www.primeone.global/",
     period: "Apr 2023 – Jul 2026",
     points: [
       "Graphic Design",
@@ -91,17 +148,19 @@ export const experience = [
       "As a Creative Designer at Prime One Global, I shape the visual identity of the brand and ensure a cohesive and compelling presence across digital and print platforms. I create visual assets, contribute to brand development, design user-centered interfaces, produce multimedia content and collaborate with marketing, sales and development teams to bring creative ideas to life.",
   },
   {
-    number: "02",
+    number: "03",
     title: "Junior Creative Designer",
     company: "Prime One Global (PVT) LTD",
+    companyLink: "https://www.primeone.global/",
     period: "May 2022 – Apr 2023",
     points: ["Design", "Analytical Skills", "Creative Thinking", "Visual Communication"],
     description: "Assisted in crafting marketing assets, visual graphics, and digital design collateral while collaborating with the senior creative team.",
   },
   {
-    number: "03",
+    number: "04",
     title: "Digital Marketing Intern",
     company: "Prime One Global (PVT) LTD",
+    companyLink: "https://www.primeone.global/",
     period: "Mar 2021 – May 2022",
     points: ["Social Media Marketing", "Content Creation", "Campaign Management", "Analytics & Reporting"],
     description: "Assisted in the planning and execution of digital marketing campaigns, managed social media accounts, created engaging content, and tracked campaign performance to support overall marketing objectives.",

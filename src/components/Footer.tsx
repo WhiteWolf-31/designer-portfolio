@@ -53,7 +53,7 @@ export function Footer() {
 
         {/* Simple Animated Watermark Typography */}
         <div className="my-5 w-full overflow-hidden text-center px-1 sm:my-6">
-          <h2 className="watermark-spotlight w-full font-display text-[7.8vw] font-black uppercase leading-none tracking-tighter select-none whitespace-nowrap sm:text-[8.8vw] md:text-[9.5vw]">
+          <h2 className="watermark-spotlight w-full font-display text-[7.8vw] font-black uppercase leading-none tracking-tighter select-none whitespace-nowrap sm:text-[8.8vw] md:text-[9.5vw] lg:text-[6.8vw] xl:text-[7.5vw]">
             {personal.firstName}
           </h2>
         </div>

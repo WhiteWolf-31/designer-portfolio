@@ -39,7 +39,18 @@ export function Experience() {
                       {job.title}
                     </h3>
                     <p className="mt-1 font-sans text-sm font-medium text-accent">
-                      {job.company}
+                      {job.companyLink ? (
+                        <a
+                          href={job.companyLink}
+                          target="_blank"
+                          rel="noreferrer"
+                          className=""
+                        >
+                          {job.company}
+                        </a>
+                      ) : (
+                        job.company
+                      )}
                     </p>
                   </div>
                 </div>

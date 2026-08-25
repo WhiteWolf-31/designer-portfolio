@@ -36,7 +36,18 @@ export function Education() {
                   </div>
                   <div className="min-w-0">
                     <h3 className="text-lg font-thin text-white sm:text-2xl">
-                      {item.school}
+                      {item.link ? (
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noreferrer"
+                          className=""
+                        >
+                          {item.school}
+                        </a>
+                      ) : (
+                        item.school
+                      )}
                     </h3>
                     <p className="mt-1 font-sans text-sm font-medium text-accent">
                       {item.award}
